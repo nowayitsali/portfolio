@@ -128,7 +128,7 @@ body {
     margin-bottom: 20px;
 }
 
-#purple {
+#name-highlight, .name-highlight {
     color: #c6a2ff;
 }
 
@@ -136,7 +136,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border-color: white 10px solid;
+    border: 10px solid white;
     object-fit: cover;
     margin-right: 20px;
     background-image: url('Images/pfp.jpg');

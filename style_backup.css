@@ -1,0 +1,567 @@
+/* MINIMAL PROFESSIONAL PORTFOLIO - REDESIGNED LAYOUT */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* NAVIGATION */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* SECTIONS */
+section {
+    padding: 6rem 2rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+section:first-of-type {
+    margin-top: 70px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 7rem 2rem 6rem;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.hero-image {
+    order: -1;
+}
+
+.profile-pic {
+    width: 260px;
+    height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.02);
+    border-color: #555;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-content .description {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.hero-content strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #0d0d0d;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+.btn-secondary:hover {
+    border-color: #fff;
+    background: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* PROJECTS SECTION */
+.projects {
+    background: #1a1a1a;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    padding: 2.5rem;
+    background: #0d0d0d;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.project-item:hover {
+    border-color: #555;
+    background: #141414;
+}
+
+.project-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+    font-size: 0.8rem;
+    background: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.project-link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 0.5rem 0;
+}
+
+.project-link:hover {
+    color: #ccc;
+    transform: translateX(4px);
+}
+
+/* EXPERIENCE SECTION */
+.experience {
+    background: #0d0d0d;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.exp-item {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #222;
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.exp-logo {
+    flex-shrink: 0;
+}
+
+.exp-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: contain;
+    background: #1a1a1a;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.exp-content {
+    flex: 1;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.exp-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.exp-date {
+    font-size: 0.8rem;
+    color: #888;
+    white-space: nowrap;
+}
+
+.exp-role {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.exp-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.exp-details li {
+    font-size: 0.9rem;
+    color: #bbb;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.exp-details li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* SKILLS SECTION */
+.skills {
+    background: #1a1a1a;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-group {
+    padding: 2rem;
+    background: #0d0d0d;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.skill-group:hover {
+    border-color: #555;
+    background: #141414;
+}
+
+.skill-group h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #fff;
+}
+
+.skill-group p {
+    font-size: 0.9rem;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+/* ABOUT SECTION */
+.about {
+    background: #0d0d0d;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.9;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+.footer {
+    background: #0d0d0d;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-container {
+        gap: 1.8rem;
+    }
+
+    .profile-pic {
+        width: 220px;
+        height: 220px;
+    }
+
+    .project-item {
+        padding: 1.8rem;
+    }
+
+    .exp-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .exp-item {
+        gap: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    section:first-of-type {
+        margin-top: 60px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-item {
+        padding: 1.5rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp-date {
+        order: -1;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+    }
+}
