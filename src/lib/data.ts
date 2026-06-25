@@ -14,8 +14,8 @@ export const profile = {
   location: "Toronto, Canada",
   email: "aliarsalan@proton.me",
   phone: "+1 437-971-2865",
-  resumeUrl: "/Muhammad_Ali_Arsalan_Resume.pdf",
-  photoUrl: "/ali-portrait.jpg",
+  resumeUrl: "/portfolio/Muhammad_Ali_Arsalan_Resume.pdf",
+  photoUrl: "/portfolio/ali-portrait.jpg",
   availability: "Open to Summer 2026 co-op & internships",
   summary:
     "Computer Science (Honours) student at York University with hands-on experience in full-stack development, cloud infrastructure, and AI-integrated applications. I deploy containerised services in enterprise Azure environments and ship production-ready web apps end-to-end.",

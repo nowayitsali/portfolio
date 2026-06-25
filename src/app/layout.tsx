@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://nowayitsali.github.io";
+const siteUrl = "https://nowayitsali.github.io/portfolio";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description: profile.summary,
   },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/portfolio/icon.svg", type: "image/svg+xml" }],
   },
 };
 
