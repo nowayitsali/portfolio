@@ -3,7 +3,6 @@ import { GraduationCap } from "lucide-react";
 import { education, profile } from "@/lib/data";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
-import { Portrait } from "@/components/portrait";
 
 export function About() {
   return (
@@ -17,11 +16,7 @@ export function About() {
           ))}
         </Reveal>
 
-        <div className="space-y-8">
-          <Reveal className="flex justify-center lg:justify-start">
-            <Portrait />
-          </Reveal>
-
+        <div>
           <Reveal delay={0.1}>
             <div className="rounded-xl border border-border bg-card p-6">
               <div className="flex items-center gap-2 text-sm font-semibold">

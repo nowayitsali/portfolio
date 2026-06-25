@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 
 import { profile, socials, stats } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { Portrait } from "@/components/portrait";
 
 const container = {
   hidden: {},
@@ -35,108 +36,117 @@ export function Hero() {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="max-w-3xl"
+          className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)]"
         >
-          <motion.div variants={item}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
-              <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-primary" />
+          <div className="max-w-3xl">
+            <motion.div variants={item}>
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
+                <span className="relative flex size-2">
+                  <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex size-2 rounded-full bg-primary" />
+                </span>
+                {profile.availability}
               </span>
-              {profile.availability}
-            </span>
-          </motion.div>
+            </motion.div>
 
-          <motion.p
-            variants={item}
-            className="mt-6 font-mono text-sm text-primary"
-          >
-            Hi, my name is
-          </motion.p>
+            <motion.p
+              variants={item}
+              className="mt-6 font-mono text-sm text-primary"
+            >
+              Hi, my name is
+            </motion.p>
 
-          <motion.h1
-            variants={item}
-            className="mt-2 text-4xl font-bold tracking-tight text-balance sm:text-6xl lg:text-7xl"
-          >
-            {profile.name}.
-          </motion.h1>
+            <motion.h1
+              variants={item}
+              className="mt-2 text-4xl font-bold tracking-tight text-balance sm:text-6xl lg:text-7xl"
+            >
+              {profile.name}.
+            </motion.h1>
 
-          <motion.h2
-            variants={item}
-            className="mt-3 text-2xl font-semibold tracking-tight text-muted-foreground text-balance sm:text-4xl"
-          >
-            I build <span className="text-foreground">full-stack</span> &{" "}
-            <span className="text-foreground">cloud</span> software.
-          </motion.h2>
+            <motion.h2
+              variants={item}
+              className="mt-3 text-2xl font-semibold tracking-tight text-muted-foreground text-balance sm:text-4xl"
+            >
+              I build <span className="text-foreground">full-stack</span> &{" "}
+              <span className="text-foreground">cloud</span> software.
+            </motion.h2>
 
-          <motion.p
-            variants={item}
-            className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
-          >
-            {profile.summary}
-          </motion.p>
+            <motion.p
+              variants={item}
+              className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+            >
+              {profile.summary}
+            </motion.p>
 
-          <motion.div
-            variants={item}
-            className="mt-6 flex items-center gap-2 text-sm text-muted-foreground"
-          >
-            <MapPin className="size-4 text-primary" />
-            {profile.location}
-          </motion.div>
+            <motion.div
+              variants={item}
+              className="mt-6 flex items-center gap-2 text-sm text-muted-foreground"
+            >
+              <MapPin className="size-4 text-primary" />
+              {profile.location}
+            </motion.div>
 
-          <motion.div
-            variants={item}
-            className="mt-8 flex flex-wrap items-center gap-3"
-          >
-            <Button asChild size="lg">
-              <a href="#projects">
-                View my work
-                <ArrowRight className="size-4" />
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <a
-                href={profile.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FileDown className="size-4" />
-                Download résumé
-              </a>
-            </Button>
-          </motion.div>
-
-          <motion.div variants={item} className="mt-8 flex items-center gap-1">
-            {socials.map((s) => (
-              <Button
-                key={s.label}
-                asChild
-                variant="ghost"
-                size="icon"
-                aria-label={s.label}
-              >
-                <a href={s.href} target="_blank" rel="noopener noreferrer">
-                  <s.icon className="size-5" />
+            <motion.div
+              variants={item}
+              className="mt-8 flex flex-wrap items-center gap-3"
+            >
+              <Button asChild size="lg">
+                <a href="#projects">
+                  View my work
+                  <ArrowRight className="size-4" />
                 </a>
               </Button>
-            ))}
-          </motion.div>
+              <Button asChild size="lg" variant="outline">
+                <a
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FileDown className="size-4" />
+                  Download résumé
+                </a>
+              </Button>
+            </motion.div>
 
-          <motion.dl
+            <motion.div variants={item} className="mt-8 flex items-center gap-1">
+              {socials.map((s) => (
+                <Button
+                  key={s.label}
+                  asChild
+                  variant="ghost"
+                  size="icon"
+                  aria-label={s.label}
+                >
+                  <a href={s.href} target="_blank" rel="noopener noreferrer">
+                    <s.icon className="size-5" />
+                  </a>
+                </Button>
+              ))}
+            </motion.div>
+
+            <motion.dl
+              variants={item}
+              className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6"
+            >
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <dt className="text-2xl font-bold tracking-tight sm:text-3xl">
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-1 text-xs text-muted-foreground sm:text-sm">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </motion.dl>
+          </div>
+
+          <motion.div
             variants={item}
-            className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6"
+            className="mx-auto w-full max-w-[18rem] sm:max-w-[20rem] lg:mx-0 lg:justify-self-end"
           >
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <dt className="text-2xl font-bold tracking-tight sm:text-3xl">
-                  {stat.value}
-                </dt>
-                <dd className="mt-1 text-xs text-muted-foreground sm:text-sm">
-                  {stat.label}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
+            <Portrait />
+          </motion.div>
         </motion.div>
       </div>
 
