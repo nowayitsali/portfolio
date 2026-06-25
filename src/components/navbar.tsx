@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Menu, X } from "lucide-react";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 import { navLinks, profile } from "@/lib/data";
@@ -52,20 +53,22 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
+    <motion.header
+      initial={false}
+      animate={{ y: hidden && !open ? "-100%" : "0%", opacity: hidden && !open ? 0 : 1 }}
+      transition={{ type: "spring", stiffness: 280, damping: 30, mass: 0.8 }}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[transform,background-color,border-color] duration-300 will-change-transform",
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-300 will-change-transform",
         scrolled
           ? "border-b border-border bg-background/80 backdrop-blur-md"
           : "border-b border-transparent",
-        hidden && !open ? "-translate-y-full" : "translate-y-0",
       )}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a
           href="#home"
           className="group font-mono text-sm font-semibold tracking-tight transition-colors hover:text-primary"
-          aria-label={`${profile.name} — home`}
+          aria-label={`${profile.name}, home`}
         >
           {profile.shortName}
           <span className="text-primary">.</span>
@@ -137,6 +140,6 @@ export function Navbar() {
           </Button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

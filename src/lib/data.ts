@@ -20,7 +20,7 @@ export const profile = {
   summary:
     "Computer Science (Honours) student at York University with hands-on experience in full-stack development, cloud infrastructure, and AI-integrated applications. I deploy containerised services in enterprise Azure environments and ship production-ready web apps end-to-end.",
   about: [
-    "I'm a Computer Science student at York University who likes turning ambiguous problems into shipped software. My focus is full-stack web development and cloud infrastructure — from modelling data and building APIs to deploying containerised services on Azure.",
+    "I'm a Computer Science student at York University who likes turning ambiguous problems into shipped software. My focus is full-stack web development and cloud infrastructure, from modelling data and building APIs to deploying containerised services on Azure.",
     "Most recently I interned on an infrastructure team where I configured Docker-based services in a Microsoft Azure enterprise environment and ran security reviews of internal data systems. On my own time I build full-stack products like CashTrackr AI, an AI-assisted personal finance app.",
     "I care about clean, accessible interfaces and reliable systems behind them. I'm currently looking for a co-op or internship where I can ship real features alongside a strong engineering team.",
   ],
@@ -76,7 +76,7 @@ export const experiences: Experience[] = [
     company: "United Technology Holdings",
     role: "Technology Intern",
     location: "Dubai, UAE",
-    period: "Jul 2025 — Aug 2025",
+    period: "Jul 2025 - Aug 2025",
     highlights: [
       "Deployed and configured containerised services using Docker within a Microsoft Azure enterprise environment, working in a Linux-based deployment workflow alongside the infrastructure team.",
       "Conducted infrastructure security reviews by auditing network access controls and documenting findings across internal data systems, identifying gaps in access-policy documentation.",
@@ -167,7 +167,7 @@ export const projects: Project[] = [
   {
     title: "Developer Portfolio",
     blurb:
-      "This site — a performant, accessible portfolio built with Next.js and shadcn/ui.",
+      "This site: a performant, accessible portfolio built with Next.js and shadcn/ui.",
     description:
       "A modern, fully responsive portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and shadcn/ui, with dark/light theming and motion.",
     period: "2026",
@@ -209,13 +209,13 @@ export const education = [
   {
     school: "York University",
     credential: "B.Sc. (Honours), Computer Science",
-    period: "Sep 2024 — Present",
+    period: "Sep 2024 - Present",
     location: "Toronto, Canada",
   },
   {
     school: "Emirates International School",
     credential: "IB Diploma Programme",
-    period: "Sep 2022 — May 2024",
+    period: "Sep 2022 - May 2024",
     location: "Dubai, UAE",
   },
 ];
