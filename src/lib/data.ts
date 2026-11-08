@@ -16,13 +16,13 @@ export const profile = {
   phone: "+1 437-971-2865",
   resumeUrl: "/Muhammad_Ali_Arsalan_Resume.pdf",
   photoUrl: "/ali-portrait.jpg",
-  availability: "Open to Summer 2026 co-op & internships",
+  availability: "Currently an AI Automation Analyst co-op at PaceZero",
   summary:
     "Computer Science (Honours) student at York University with hands-on experience in full-stack development, cloud infrastructure, and AI-integrated applications. I deploy containerised services in enterprise Azure environments and ship production-ready web apps end-to-end.",
   about: [
     "I'm a Computer Science student at York University who likes turning ambiguous problems into shipped software. My focus is full-stack web development and cloud infrastructure, from modelling data and building APIs to deploying containerised services on Azure.",
-    "Most recently I interned on an infrastructure team where I configured Docker-based services in a Microsoft Azure enterprise environment and ran security reviews of internal data systems. On my own time I build full-stack products like CashTrackr AI, an AI-assisted personal finance app.",
-    "I care about clean, accessible interfaces and reliable systems behind them. I'm currently looking for a co-op or internship where I can ship real features alongside a strong engineering team.",
+    "Right now I'm on co-op at PaceZero in downtown Toronto as an AI Automation Analyst. Before that, I interned on an infrastructure team where I configured Docker-based services in a Microsoft Azure enterprise environment and ran security reviews of internal data systems. On my own time I build full-stack products like CashTrackr AI, an AI-assisted personal finance app.",
+    "I care about clean, accessible interfaces and reliable systems behind them, and I like shipping real features alongside a strong engineering team.",
   ],
 };
 
@@ -72,6 +72,15 @@ export type Experience = {
 };
 
 export const experiences: Experience[] = [
+  {
+    company: "PaceZero Capital Partners",
+    role: "AI Automation Analyst (Co-op)",
+    location: "Toronto, Canada · On-site",
+    period: "Sep 2026 - Present",
+    highlights: [
+      "Building AI-powered automations to streamline internal workflows.",
+    ],
+  },
   {
     company: "United Technology Holdings",
     role: "Technology Intern",
@@ -221,7 +230,7 @@ export const education = [
 ];
 
 export const stats = [
-  { value: "3+", label: "Internships" },
-  { value: "2026", label: "Expected co-op term" },
+  { value: "4", label: "Internships" },
+  { value: "2026", label: "Co-op at PaceZero" },
   { value: "10+", label: "Languages & frameworks" },
 ];

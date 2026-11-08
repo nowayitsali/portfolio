@@ -15,7 +15,7 @@ export function Experience() {
         <SectionHeading
           index="02"
           title="Where I've worked"
-          description="Hands-on experience across cloud infrastructure and operations."
+          description="Hands-on experience across AI automation, cloud infrastructure, and operations."
         />
 
         <ol className="relative space-y-10 border-l border-border pl-6 sm:pl-8">
