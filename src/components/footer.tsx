@@ -3,7 +3,7 @@ import { profile, socials } from "@/lib/data";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-border">
+    <footer>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6 lg:px-8">
         <p className="text-sm text-muted-foreground">
           © {year} {profile.name}. Built with Next.js, Tailwind &amp; shadcn/ui.

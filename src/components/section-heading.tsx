@@ -15,7 +15,7 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <Reveal className={cn("mb-12 max-w-2xl", className)}>
+    <Reveal className={cn("mb-10 max-w-2xl", className)}>
       <div className="flex items-center gap-3">
         <span className="font-mono text-sm text-primary">{index}</span>
         <span className="h-px w-10 bg-border" />

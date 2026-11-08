@@ -8,7 +8,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-6xl px-4 py-28 sm:px-6 lg:px-8"
+      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <Reveal className="mx-auto max-w-2xl text-center">
         <span className="font-mono text-sm text-primary">05 · What&apos;s next</span>

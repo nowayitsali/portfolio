@@ -1,4 +1,4 @@
-import { ArrowUpRight, Folder } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { projects } from "@/lib/data";
 import { GithubIcon } from "@/components/brand-icons";
@@ -10,7 +10,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8"
+      className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
     >
       <SectionHeading
         index="03"
@@ -20,13 +20,35 @@ export function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, i) => (
-          <Reveal as="article" key={project.title} delay={i * 0.05}>
-            <div className="group relative flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
-              <div className="flex items-start justify-between">
-                <span className="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
-                  <Folder className="size-5" />
-                </span>
-                <div className="flex items-center gap-1">
+          <Reveal
+            as="article"
+            key={project.title}
+            delay={i * 0.05}
+            className={
+              projects.length % 2 === 1 && i === projects.length - 1
+                ? "md:col-span-2"
+                : undefined
+            }
+          >
+            <div className="group relative flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-xl font-semibold tracking-tight">
+                      {project.title}
+                    </h3>
+                    {project.hackathon ? (
+                      <Badge className="text-[10px]">Hackathon</Badge>
+                    ) : null}
+                    {project.groupProject ? (
+                      <Badge className="text-[10px]">Group project</Badge>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 font-mono text-xs text-muted-foreground">
+                    {project.period}
+                  </p>
+                </div>
+                <div className="-mr-2 -mt-1 flex shrink-0 items-center gap-1">
                   {project.links.github ? (
                     <a
                       href={project.links.github}
@@ -52,21 +74,6 @@ export function Projects() {
                 </div>
               </div>
 
-              <div className="mt-5 flex items-center gap-2">
-                <h3 className="text-xl font-semibold tracking-tight">
-                  {project.title}
-                </h3>
-                {project.hackathon ? (
-                  <Badge className="text-[10px]">Hackathon</Badge>
-                ) : null}
-                {project.groupProject ? (
-                  <Badge className="text-[10px]">Group project</Badge>
-                ) : null}
-              </div>
-              <p className="mt-1 font-mono text-xs text-muted-foreground">
-                {project.period}
-              </p>
-
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {project.description}
               </p>
@@ -83,7 +90,7 @@ export function Projects() {
                 ))}
               </ul>
 
-              <div className="mt-auto flex flex-wrap gap-2 pt-6">
+              <div className="mt-auto flex flex-wrap gap-2 pt-5">
                 {project.tags.map((t) => (
                   <Badge key={t} variant="muted">
                     {t}
