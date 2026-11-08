@@ -58,6 +58,7 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Hackathons", href: "#hackathons" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
@@ -218,6 +219,63 @@ export const projects: Project[] = [
       "Built mobile-first with semantic HTML, accessible focus states, and prefers-reduced-motion support.",
       "Scroll-spy navigation, theme toggle, and staggered reveal animations for a polished feel.",
     ],
+  },
+];
+
+export type Hackathon = {
+  event: string;
+  date: string;
+  partners?: string;
+  project: string;
+  summary: string;
+  highlights: string[];
+  tags: string[];
+  links: { github?: string; demo?: string };
+};
+
+export const hackathons: Hackathon[] = [
+  {
+    event: "UnHack",
+    date: "Nov 2026",
+    project: "Foodex",
+    summary:
+      "Built with a team of five: a food checker that scans food, products, or barcodes and tells you whether they fit your dietary restrictions, with sources for every answer.",
+    highlights: [
+      "Owned the Scanner and Search screens, with barcode detection, MediaPipe object tracking, and Gemini photo identification.",
+      "Shipped a live prototype on Vercel with Supabase sign-in during the event.",
+    ],
+    tags: ["React", "TypeScript", "Gemini API", "Supabase"],
+    links: {
+      github: "https://github.com/nowayitsali/foodex",
+      demo: "https://foodex-ruddy.vercel.app",
+    },
+  },
+  {
+    event: "The Foundry Vol. I: Water Hackathon",
+    date: "Oct 2026",
+    partners: "WaterAid Canada · The AI Fellowship · SOON",
+    project: "MCP marketplace for nonprofits",
+    summary:
+      "Tackled a real challenge from WaterAid Canada: how AI can help nonprofits make a greater impact.",
+    highlights: [
+      "Built an MCP marketplace that makes AI tools easier for nonprofit staff to use while keeping data privacy and security first.",
+      "Recognised by the organiser in a post-event shout-out for the energy and skills I brought to the team.",
+    ],
+    tags: ["AI", "MCP", "Data privacy"],
+    links: {},
+  },
+  {
+    event: "RedTeam Hackathon Series: Drone Autonomy Challenge",
+    date: "Jun 2026",
+    project: "Drone Wayfinder",
+    summary:
+      "Programmed an autonomous drone to fly a branching course in an Unreal Engine simulator by reading visual clues from its camera.",
+    highlights: [
+      "Used computer vision to follow the green arrow and count spheres to choose each turn.",
+      "Handled a GPS-denied mode with waypoint navigation and state estimation from onboard sensors.",
+    ],
+    tags: ["Python", "Computer Vision", "ProjectAirSim"],
+    links: { github: "https://github.com/nowayitsali/drone-wayfinder" },
   },
 ];
 
