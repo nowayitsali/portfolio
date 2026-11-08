@@ -57,7 +57,6 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Hackathons", href: "#hackathons" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
@@ -198,44 +197,6 @@ export const projects: Project[] = [
       "Computer vision reads arrows and counts spheres from the drone's camera to choose each turn.",
       "Handles a GPS-denied mode with waypoint navigation and sensor-fused state estimation.",
     ],
-  },
-];
-
-export type Hackathon = {
-  event: string;
-  date: string;
-  partners?: string;
-  project: string;
-  summary: string;
-  links: { github?: string; demo?: string };
-};
-
-export const hackathons: Hackathon[] = [
-  {
-    event: "UnHack",
-    date: "Nov 2026",
-    project: "Foodex",
-    summary: "A dietary-restriction food checker, built with a team of five.",
-    links: {
-      github: "https://github.com/nowayitsali/foodex",
-      demo: "https://foodex-ruddy.vercel.app",
-    },
-  },
-  {
-    event: "The Foundry Vol. I: Water Hackathon",
-    date: "Oct 2026",
-    partners: "WaterAid Canada · The AI Fellowship · SOON",
-    project: "Wetland MCP Hub",
-    summary:
-      "An MCP marketplace that helps WaterAid Canada staff use AI safely. Recognised by the organiser after the event.",
-    links: { github: "https://github.com/mohammedahmxd/Wetland" },
-  },
-  {
-    event: "RedTeam Hackathon: Drone Autonomy Challenge",
-    date: "Jun 2026",
-    project: "Drone Wayfinder",
-    summary: "An autonomous drone that reads visual clues to fly a branching course.",
-    links: { github: "https://github.com/nowayitsali/drone-wayfinder" },
   },
 ];
 

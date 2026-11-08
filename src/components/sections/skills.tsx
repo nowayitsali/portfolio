@@ -11,7 +11,7 @@ export function Skills() {
     >
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <SectionHeading
-          index="05"
+          index="04"
           title="Skills & tooling"
           description="The languages, frameworks, and platforms I reach for."
         />
