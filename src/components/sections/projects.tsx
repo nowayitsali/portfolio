@@ -59,6 +59,9 @@ export function Projects() {
                 {project.hackathon ? (
                   <Badge className="text-[10px]">Hackathon</Badge>
                 ) : null}
+                {project.groupProject ? (
+                  <Badge className="text-[10px]">Group project</Badge>
+                ) : null}
               </div>
               <p className="mt-1 font-mono text-xs text-muted-foreground">
                 {project.period}

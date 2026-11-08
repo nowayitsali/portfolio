@@ -124,6 +124,7 @@ export type Project = {
   tags: string[];
   period: string;
   hackathon?: boolean;
+  groupProject?: boolean;
   links: { github?: string; demo?: string };
   highlights: string[];
 };
@@ -175,9 +176,9 @@ export const projects: Project[] = [
     ],
     links: { github: "https://github.com/mohammedahmxd/Wetland" },
     highlights: [
-      "Built an MCP marketplace and dashboard where staff browse tools by department, read example prompts, compare tools, and submit new ones, plus a tool builder and document editor for versioned knowledge.",
+      "Built an MCP marketplace where nonprofit staff discover, filter, save, and submit AI tools, including a live brand-guidelines MCP and seven Water Care tool concepts.",
       "Created MCP servers for WaterAid's brand guidelines, first-time donor growth reporting from a Raiser's Edge-style export, and generating branded PowerPoint decks.",
-      "Designed a TypeScript, Fastify, and PostgreSQL backend with OIDC sign-in, organisation scoping, immutable versions, independent approvals, and audit logs.",
+      "Designed a versioned control plane for tools and knowledge in TypeScript, Fastify, and PostgreSQL, with OIDC sign-in, organisation scoping, independent approvals, and audit logs.",
       "Kept private records out by using only synthetic data, and deployed from GitHub to Google Cloud Run with short-lived credentials instead of stored keys.",
     ],
   },
@@ -207,10 +208,11 @@ export const projects: Project[] = [
   },
   {
     title: "Enterprise Rent-A-Car Portal",
+    groupProject: true,
     blurb:
       "Full-stack portal for managing a car rental company's database on Azure SQL.",
     description:
-      "A database course group project (EECS 3421): a Next.js web app on Azure SQL Server for running an Enterprise Rent-A-Car style business, from reservations and fleet to payments and maintenance.",
+      "A database course project (EECS 3421): a Next.js web app on Azure SQL Server for running an Enterprise Rent-A-Car style business, from reservations and fleet to payments and maintenance.",
     period: "2026",
     tags: ["Next.js", "React", "JavaScript", "SQL", "Azure SQL", "Vercel"],
     links: {
