@@ -16,7 +16,7 @@ export const profile = {
   phone: "+1 437-971-2865",
   resumeUrl: "/Muhammad_Ali_Arsalan_Resume.pdf",
   photoUrl: "/ali-portrait.jpg",
-  availability: "Currently an AI Automation Analyst co-op at PaceZero",
+  availability: "Seeking a Summer 2027 co-op",
   summary:
     "Computer Science (Honours) student at York University with hands-on experience in full-stack development, cloud infrastructure, and AI-integrated applications. I deploy containerised services in enterprise Azure environments and ship production-ready web apps end-to-end.",
   about: [
