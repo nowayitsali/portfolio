@@ -129,6 +129,34 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Foodex",
+    blurb:
+      "Hackathon app that checks whether a food fits your dietary restrictions, with sources behind every answer.",
+    description:
+      "Built with a team of five at a hackathon: scan a food, product, or barcode (or search by name) and Foodex checks it against your restrictions, such as Halal, Kosher, Vegan, gluten-free, or nut-free, showing the sources behind each verdict.",
+    period: "2026",
+    featured: true,
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Gemini API",
+      "Supabase",
+      "MediaPipe",
+      "Open Food Facts",
+      "Vercel",
+    ],
+    links: {
+      github: "https://github.com/nowayitsali/foodex",
+      demo: "https://foodex-ruddy.vercel.app",
+    },
+    highlights: [
+      "Built the Scanner and Search screens: live camera scanning with barcode detection and MediaPipe object tracking, plus Gemini photo identification at one model call per scan.",
+      "Designed the check so AI only gathers findings (from Open Food Facts and HMA's halal list) and rule-based code decides each verdict, so weak or missing data returns \"Not enough info\" instead of a false \"Fits\".",
+      "Shipped it on Vercel with serverless API routes and Supabase Google sign-in within the hackathon.",
+    ],
+  },
+  {
     title: "CashTrackr AI",
     blurb:
       "Full-stack personal-finance app with AI-assisted expense categorisation.",
