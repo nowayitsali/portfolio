@@ -183,6 +183,24 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Enterprise Rent-A-Car Portal",
+    blurb:
+      "Full-stack portal for managing a car rental company's database on Azure SQL.",
+    description:
+      "A database course group project (EECS 3421): a Next.js web app on Azure SQL Server for running an Enterprise Rent-A-Car style business, from reservations and fleet to payments and maintenance.",
+    period: "2026",
+    tags: ["Next.js", "React", "JavaScript", "SQL", "Azure SQL", "Vercel"],
+    links: {
+      github: "https://github.com/nowayitsali/enterprise-car-rental-portal",
+      demo: "https://enterprise-car-rental-portal.vercel.app",
+    },
+    highlights: [
+      "Designed a 14-table relational schema with sample data covering customers, loyalty accounts, vehicles, branches, employees, reservations, payments, and maintenance.",
+      "Built Next.js API routes over an Azure SQL connection pool powering a live stats dashboard and CRUD screens for each part of the business.",
+      "Ran all 10 of the project's analytical SQL queries directly in the browser, and deployed the app to Vercel.",
+    ],
+  },
+  {
     title: "Drone Wayfinder",
     blurb:
       "Autonomous drone that flies a branching course by reading visual clues from its camera.",
