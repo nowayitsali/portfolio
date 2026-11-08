@@ -123,7 +123,7 @@ export type Project = {
   description: string;
   tags: string[];
   period: string;
-  featured?: boolean;
+  hackathon?: boolean;
   links: { github?: string; demo?: string };
   highlights: string[];
 };
@@ -131,12 +131,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Foodex",
+    hackathon: true,
     blurb:
       "Hackathon app that checks whether a food fits your dietary restrictions, with sources behind every answer.",
     description:
       "Built with a team of five at a hackathon: scan a food, product, or barcode (or search by name) and Foodex checks it against your restrictions, such as Halal, Kosher, Vegan, gluten-free, or nut-free, showing the sources behind each verdict.",
     period: "2026",
-    featured: true,
     tags: [
       "React",
       "TypeScript",
@@ -158,13 +158,35 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Wetland MCP Hub",
+    hackathon: true,
+    blurb:
+      "Hackathon hub that helps nonprofit staff find, build, and manage AI tools safely.",
+    description:
+      "Built with a team at The Foundry Vol. I: Water Hackathon for WaterAid Canada: a hub for reusable MCP tools and versioned knowledge, designed so nonprofit staff can use AI without putting private data at risk.",
+    period: "2026",
+    tags: [
+      "JavaScript",
+      "Node.js",
+      "TypeScript",
+      "MCP",
+      "PostgreSQL",
+      "Google Cloud Run",
+    ],
+    links: { github: "https://github.com/mohammedahmxd/Wetland" },
+    highlights: [
+      "Built the dashboard's departmental resource library: a searchable MCP catalogue with details, example prompts, and method tags, plus create, edit, delete, and restore.",
+      "Added role-based access with an Admin role for catalogue management and review workflows, with audit logging for role changes.",
+      "Wrote automated tests and a QA checklist for the dashboard, which the team deploys to Google Cloud Run through Cloud Build CI/CD.",
+    ],
+  },
+  {
     title: "CashTrackr AI",
     blurb:
       "Full-stack personal-finance app with AI-assisted expense categorisation.",
     description:
       "A full-stack personal finance web app with a React + Vite + TypeScript frontend and a Node.js/Express backend connected to PostgreSQL via Prisma.",
     period: "2026",
-    featured: true,
     tags: [
       "TypeScript",
       "React",
@@ -202,12 +224,12 @@ export const projects: Project[] = [
   },
   {
     title: "Drone Wayfinder",
+    hackathon: true,
     blurb:
       "Autonomous drone that flies a branching course by reading visual clues from its camera.",
     description:
       "A RedTeam Hackathon entry: an autonomous drone agent that navigates a branching obstacle course in an Unreal Engine simulator (ProjectAirSim), making decisions live from its camera feed.",
     period: "2026",
-    featured: true,
     tags: [
       "Python",
       "Computer Vision",
@@ -230,7 +252,6 @@ export const projects: Project[] = [
     description:
       "A modern, fully responsive portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and shadcn/ui, with dark/light theming and motion.",
     period: "2026",
-    featured: true,
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Motion"],
     links: { github: "https://github.com/nowayitsali" },
     highlights: [
@@ -280,7 +301,7 @@ export const hackathons: Hackathon[] = [
       "Recognised by the organiser in a post-event shout-out for the energy and skills I brought to the team.",
     ],
     tags: ["AI", "MCP", "Data privacy"],
-    links: {},
+    links: { github: "https://github.com/mohammedahmxd/Wetland" },
   },
   {
     event: "RedTeam Hackathon Series: Drone Autonomy Challenge",

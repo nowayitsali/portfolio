@@ -56,8 +56,8 @@ export function Projects() {
                 <h3 className="text-xl font-semibold tracking-tight">
                   {project.title}
                 </h3>
-                {project.featured ? (
-                  <Badge className="text-[10px]">Featured</Badge>
+                {project.hackathon ? (
+                  <Badge className="text-[10px]">Hackathon</Badge>
                 ) : null}
               </div>
               <p className="mt-1 font-mono text-xs text-muted-foreground">
