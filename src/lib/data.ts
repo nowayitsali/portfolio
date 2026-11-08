@@ -145,7 +145,6 @@ export const projects: Project[] = [
       "Gemini API",
       "Supabase",
       "MediaPipe",
-      "Open Food Facts",
       "Vercel",
     ],
     links: {
@@ -154,7 +153,7 @@ export const projects: Project[] = [
     },
     highlights: [
       "Built the Scanner and Search screens: live camera scanning with barcode detection and MediaPipe object tracking, plus Gemini photo identification at one model call per scan.",
-      "Designed the check so AI only gathers findings (from Open Food Facts and HMA's halal list) and rule-based code decides each verdict, so weak or missing data returns \"Not enough info\" instead of a false \"Fits\".",
+      "Designed the check so AI only gathers findings (from product data and HMA's halal list) and rule-based code decides each verdict, so weak or missing data returns \"Not enough info\" instead of a false \"Fits\".",
       "Shipped it on Vercel with serverless API routes and Supabase Google sign-in within the hackathon.",
     ],
   },
