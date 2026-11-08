@@ -78,8 +78,11 @@ export const experiences: Experience[] = [
     location: "Toronto, Canada · On-site",
     period: "Sep 2026 - Present",
     highlights: [
-      "Building AI-powered automations to streamline internal workflows.",
+      "Building a full-stack portfolio management system for the private credit team, reporting directly to the CEO, that replaces manual Excel workflows for tracking deals and analysing financials.",
+      "Moved the frontend to React, improved the database infrastructure on Azure, and set up CI/CD so the app can be maintained and shipped reliably.",
+      "Implemented cash-flow projections (including revolving credit facilities and borrower defaults), warrant valuations, accretion schedules, and relative value analysis, validating results against the firm's source-of-truth Excel models.",
     ],
+    stack: ["React", "Azure", "CI/CD", "Excel"],
   },
   {
     company: "United Technology Holdings",
